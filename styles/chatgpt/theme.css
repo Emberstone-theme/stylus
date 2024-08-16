@@ -1,0 +1,158 @@
+@-moz-document domain("chatgpt.com") {
+    /*
+       🔥🪨 Emberstone Theme for ChatGPT
+    
+      Author: samYorel
+      Theme: Emberstone
+      GitHub: https://github.com/Emberstone-theme
+    
+      Description:
+      This CSS customizes the ChatGPT interface with the Emberstone theme, 
+      applying a warm and vibrant color palette designed for a comfortable 
+      and focused user experience.
+    
+      🌐 The theme includes:
+      - Ocean, Mauve, Pistachio, Olive, Merigold, Orange, Rose, Background, and Foreground shades
+      - Carefully selected colors for text, backgrounds, sidebars, and code preview
+    */
+    
+    :root {
+        --ocean-faded: #8AD9E9;
+        --ocean-regular: #00849A;
+        --ocean-intense: #005278;
+        --ocean-darken: #142734;
+        --mauve-faded: #D7C0E4;
+        --mauve-regular: #A17AB5;
+        --mauve-intense: #57345A;
+        --mauve-darken: #27212E;
+        --pistachio-faded: #A8E7D2;
+        --pistachio-regular: #7FA39F;
+        --pistachio-intense: #3F6B57;
+        --pistachio-darken: #222C2E;
+        --olive-faded: #C9E295;
+        --olive-regular: #9BBA51;
+        --olive-intense: #637411;
+        --olive-darken: #272D20;
+        --merigold-faded: #ECDA9C;
+        --merigold-regular: #CAA53E;
+        --merigold-intense: #AB7400;
+        --merigold-darken: #362D22;
+        --orange-faded: #ECC6AE;
+        --orange-regular: #D88349;
+        --orange-intense: #BD4C1B;
+        --orange-darken: #352320;
+        --rose-faded: #EDB7BF;
+        --rose-regular: #C84C53;
+        --rose-intense: #C41323;
+        --rose-darken: #361A24;
+        --background-faded: #242835;
+        --background-regular: #151722;
+        --background-intense: #10121A;
+        --background-darken: #0A0A0E;
+        --foreground-faded: #E3E3E3;
+        --foreground-regular: #F8EDDC;
+        --foreground-intense: #ECD2AB;
+        --foreground-darken: #A7A9A1;
+    }
+    
+    /* Default color */
+    * {
+        color: var(--foreground-faded);
+    }
+    
+    /* Sidebar */
+    .bg-token-sidebar-surface-primary {
+        background-color: var(--background-intense);
+    }
+    
+    div.bg-token-sidebar-surface-secondary {
+        background-color: transparent;
+    }
+    
+    [class~="hover:bg-token-sidebar-surface-secondary"]:hover {
+        background-color: var(--background-faded);
+    }
+    
+    div.bg-token-sidebar-surface-secondary * {
+        color: var(--merigold-intense);
+    }
+    
+    .ltr\:bg-gradient-to-l:where([dir="ltr"], [dir="ltr"] *) {
+        visibility: hidden;
+    }
+    
+    /* Main area */
+    div[class="relative flex h-full max-w-full flex-1 flex-col overflow-hidden"] {
+        background-color: var(--background-regular);
+    }
+    
+    div[class='relative max-w-[70%] rounded-3xl bg-[#f4f4f4] px-5 py-2.5 dark:bg-token-main-surface-secondary'] {
+        mix-blend-mode: luminosity;
+    }
+    
+    div.bg-token-main-surface-secondary {
+        background-color: var(--background-intense);
+    }
+    
+    .bg-token-main-surface-primary {
+        mix-blend-mode: luminosity;
+    }
+    
+    /* Code preview */
+    code.hljs {
+        color: var(--foreground-regular);
+    }
+    
+    .bg-gray-950,
+    .dark .dark\:bg-token-main-surface-secondary {
+        background-color: var(--background-faded);
+    }
+    
+    .hljs-built_in {
+        color: var(--olive-regular);
+    }
+    
+    .hljs-string {
+        color: var(--merigold-regular);
+    }
+    
+    .hljs-variable {
+        color: var(--foreground-regular);
+    }
+    
+    .hljs-keyword {
+        color: var(--orange-regular);
+    }
+    
+    .hljs-meta {
+        color: var(--orange-regular);
+    }
+    
+    .hljs-comment {
+        color: var(--foreground-darken);
+    }
+    
+    .hljs-attr,
+    .hljs-bullet {
+        color: var(--rose-regular);
+    }
+    
+    .hljs-title {
+        color: var(--olive-regular);
+        font-weight: bold;
+    }
+    
+    .hljs-selector-pseudo {
+        color: var(--pistachio-faded);
+    }
+    
+    .hljs-number {
+        color: var(--mauve-faded);
+    }
+    
+    button,
+    button svg * {
+        color: var(--merigold-intense);
+    }
+    
+}
